@@ -1,0 +1,713 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>고양경찰서 여성청소년과 2026 성과</title>
+<meta name="description" content="약자의 곁을, 끝까지 — 관계성 범죄·학대·성폭력·실종·청소년 분야 고양경찰서 여성청소년과 2026 성과 (약 1분)">
+<meta property="og:title" content="고양경찰서 여성청소년과 2026 성과">
+<meta property="og:description" content="약자의 곁을, 끝까지 (약 1분 모션그래픽)">
+<meta property="og:image" content="https://dlrmsals1425-dotcom.github.io/goyang-2026-yeocheong/photos/0_station.jpg">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root{
+  --k1:#9B7BFF; --k2:#16B5A4; --k3:#F2994A; --k4:#3D8BFF;
+  --navy:#0B1730; --ink:#fff; --dim:rgba(255,255,255,.62); --card:rgba(255,255,255,.07); --red:#FF5C5C; --gold:#FFD34D;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;background:#000;overflow:hidden}
+body{font-family:"Pretendard Variable",Pretendard,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;-webkit-font-smoothing:antialiased}
+
+/* 1080x1920 무대를 화면에 맞춰 축소 */
+#stage{position:absolute;left:50%;top:50%;width:1080px;height:1920px;
+  transform:translate(-50%,-50%) scale(var(--s,.3));background:var(--navy);color:var(--ink);overflow:hidden;
+  --c:var(--navy);cursor:pointer;user-select:none}
+#stage.paused *{animation-play-state:paused!important}
+.glow{position:absolute;width:1500px;height:1500px;left:-210px;top:-500px;border-radius:50%;
+  background:var(--c);opacity:.28;filter:blur(220px);transition:background-color 1s}
+.glow.b{top:auto;bottom:-800px;left:-300px;opacity:.16}
+
+/* 상단 챕터 진행 바 */
+#bar{position:absolute;left:90px;right:90px;top:90px;display:flex;gap:16px;z-index:5;transition:opacity .5s}
+#stage[data-ch="0"] #bar,#stage[data-ch="5"] #bar{opacity:0}
+.seg{flex:1}
+.seg .track{height:12px;border-radius:6px;background:rgba(255,255,255,.16);overflow:hidden}
+.seg .fill{height:100%;width:0;background:var(--sc)}
+.seg span{display:block;margin-top:14px;font-size:28px;font-weight:600;color:rgba(255,255,255,.45);transition:color .4s;text-shadow:0 2px 8px rgba(0,0,0,.5);white-space:nowrap}
+.seg.cur span{color:var(--sc)}
+
+footer{position:absolute;left:0;right:0;bottom:150px;text-align:center;font-size:28px;font-weight:500;color:rgba(255,255,255,.45);letter-spacing:.04em;z-index:5}
+
+/* 장면 */
+.scene{position:absolute;inset:0;padding:240px 90px 210px;display:flex;flex-direction:column;gap:38px;visibility:hidden}
+.scene[data-ch="1"]{--c:var(--k1)} .scene[data-ch="2"]{--c:var(--k2)}
+.scene[data-ch="3"]{--c:var(--k3)} .scene[data-ch="4"]{--c:var(--k4)}
+.scene.on{visibility:visible;animation:sceneIn .5s both}
+.scene.out{visibility:visible;animation:sceneOut .45s both}
+.scene .a{opacity:0}
+.scene.out .a{opacity:1}
+.scene.on .a{animation:var(--anim,up) var(--du,.75s) cubic-bezier(.2,.8,.2,1) both;animation-delay:var(--d,0ms)}
+.center{justify-content:center}
+@keyframes sceneIn{from{opacity:0}to{opacity:1}}
+@keyframes sceneOut{from{opacity:1}to{opacity:0;transform:translateY(-30px)}}
+@keyframes up{from{opacity:0;transform:translateY(50px)}to{opacity:1;transform:none}}
+@keyframes pop{0%{opacity:0;transform:scale(.4)}70%{opacity:1;transform:scale(1.08)}100%{opacity:1;transform:none}}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@keyframes left{from{opacity:0;transform:translateX(-80px)}to{opacity:1;transform:none}}
+/* 빡! — 크게 날아와 박히는 강조 */
+@keyframes slam{0%{opacity:0;transform:scale(3);filter:blur(12px)}55%{opacity:1;transform:scale(.92);filter:none}75%{transform:scale(1.04)}100%{opacity:1;transform:none}}
+@keyframes stamp{0%{opacity:0;transform:scale(3.2) rotate(-8deg)}55%{opacity:1;transform:scale(.9) rotate(-8deg)}100%{opacity:1;transform:rotate(-8deg)}}
+/* 강조가 박히는 순간 화면 흔들림·번쩍임 */
+.scene.on .jolt{animation:jolt .45s linear both;animation-delay:var(--jd)}
+@keyframes jolt{0%,100%{transform:none}15%{transform:translate(-14px,8px)}30%{transform:translate(12px,-10px)}45%{transform:translate(-8px,6px)}60%{transform:translate(6px,-4px)}80%{transform:translate(-2px,2px)}}
+.flash{position:absolute;inset:0;background:#fff;opacity:0;pointer-events:none;z-index:4}
+.scene.on .flash{animation:flash .5s ease-out both;animation-delay:var(--d)}
+@keyframes flash{0%{opacity:0}10%{opacity:.55}100%{opacity:0}}
+
+.tag{align-self:flex-start;display:inline-flex;align-items:center;gap:18px;padding:14px 34px;border-radius:999px;background:var(--c);font-size:38px;font-weight:800}
+.tag small{font-size:30px;font-weight:600;opacity:.75}
+h2{font-size:74px;line-height:1.22;font-weight:800;letter-spacing:-.02em}
+.sub{font-size:40px;line-height:1.45;color:var(--dim);font-weight:500}
+.hl{color:var(--c)}
+.badge{align-self:flex-start;padding:10px 26px;border-radius:14px;border:3px solid var(--c);color:var(--c);font-size:34px;font-weight:800}
+.big{font-size:170px;line-height:1;font-weight:900;letter-spacing:-.04em;color:var(--c)}
+.big small{font-size:72px;font-weight:800;margin-left:6px;letter-spacing:-.02em}
+.cap{font-size:42px;font-weight:600;line-height:1.4}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.stat{background:var(--card);border-radius:30px;padding:30px 32px}
+.stat b{display:block;white-space:nowrap;font-size:84px;line-height:1;font-weight:900;color:var(--c);letter-spacing:-.04em}
+.stat b small{font-size:44px;margin-left:4px}
+.stat > span{display:block;margin-top:14px;font-size:32px;color:var(--dim);font-weight:600;line-height:1.3}
+
+/* 사진 칸 */
+.photo{position:relative;flex:none;border-radius:36px;overflow:hidden;background:rgba(255,255,255,.05)}
+.photo img{width:100%;height:100%;object-fit:cover;display:block}
+.scene.on .photo img{animation:kb 9s linear both}
+@keyframes kb{from{transform:scale(1.1)}to{transform:scale(1)}}
+.chip{position:absolute;left:24px;top:24px;z-index:2;padding:10px 22px;border-radius:12px;background:rgba(0,0,0,.65);font-size:30px;font-weight:800}
+.chip b{color:var(--c);margin-right:8px}
+
+/* 오프닝 */
+#s-open{justify-content:flex-end;padding-bottom:330px}
+.hero{position:absolute;left:0;right:0;top:0;height:1180px;overflow:hidden}
+.hero img{width:100%;height:100%;object-fit:cover;object-position:56% 40%;filter:saturate(.9) brightness(.8)}
+.scene.on .hero img{animation:heroZoom 5.5s ease-out both}
+@keyframes heroZoom{from{transform:scale(1.25)}to{transform:scale(1.05)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,23,48,.15) 0%,rgba(11,23,48,.35) 45%,var(--navy) 100%)}
+#s-open h1{position:relative;font-size:178px;line-height:1.08;font-weight:900;letter-spacing:-.05em;text-shadow:0 10px 40px rgba(0,0,0,.5)}
+#s-open h1 em{font-style:normal;color:var(--gold)}
+#s-open .line{position:relative;margin-top:60px;display:flex;align-items:center;gap:26px}
+#s-open .line i{flex:none;width:14px;align-self:stretch;border-radius:7px;background:linear-gradient(var(--k1),var(--k2),var(--k3),var(--k4))}
+#s-open p{font-size:64px;line-height:1.25;font-weight:800}
+#s-open p b{color:var(--k1)}
+
+/* 단계 흐름 */
+.steps{display:flex;flex-direction:column;gap:18px}
+.step{display:flex;align-items:center;gap:28px;padding:28px 34px;border-radius:30px;background:var(--card);font-size:42px;font-weight:800;line-height:1.3}
+.step i{flex:none;width:76px;height:76px;border-radius:50%;background:var(--c);display:flex;align-items:center;justify-content:center;font-style:normal;font-size:38px;font-weight:900}
+.step small{display:block;font-size:30px;font-weight:600;color:var(--dim)}
+.step em{font-style:normal;color:var(--c)}
+.step.goal{background:var(--c)} .step.goal i{background:#fff;color:var(--navy)}
+
+/* 막대 그래프 */
+.chart{position:relative;display:flex;align-items:flex-end;justify-content:center;gap:var(--gap,140px);height:var(--ht,640px);padding:40px 50px 0;background:var(--card);border-radius:36px}
+.col{display:flex;flex-direction:column;align-items:center;gap:16px;width:var(--cw,220px)}
+.col b{font-size:58px;font-weight:900;white-space:nowrap}
+.col .bv{width:100%;height:var(--h);border-radius:22px 22px 0 0;background:var(--c);transform-origin:bottom}
+.col.before .bv{background:rgba(255,255,255,.3)}
+.scene.on .col .bv{animation:grow 1s cubic-bezier(.2,.8,.2,1) both;animation-delay:var(--d)}
+@keyframes grow{from{transform:scaleY(0)}to{transform:none}}
+.col > span{font-size:30px;color:var(--dim);font-weight:600;padding-bottom:28px;white-space:nowrap}
+
+/* 전년 대비 비교 행 */
+.cmp{display:flex;flex-direction:column;gap:22px}
+.crow{padding:28px 36px;border-radius:30px;background:var(--card)}
+.crow .l{font-size:38px;font-weight:800;line-height:1.3}
+.crow .l small{font-size:30px;font-weight:600;color:var(--dim);margin-left:10px}
+.crow .v{display:flex;align-items:baseline;gap:18px;margin-top:8px;font-size:44px;font-weight:700;color:var(--dim)}
+.crow .v b{font-size:92px;font-weight:900;color:var(--c);letter-spacing:-.03em}
+.crow .v .up{margin-left:auto;align-self:center;padding:8px 20px;border-radius:14px;background:var(--c);color:#fff;font-size:34px;font-weight:900;white-space:nowrap}
+.crow.key{box-shadow:0 0 0 5px var(--c) inset}
+
+/* 우수사례 이야기 */
+.stampbox{position:relative}
+.story{position:relative;display:flex;flex-direction:column;gap:22px;padding-left:56px}
+.story::before{content:"";position:absolute;left:18px;top:30px;bottom:30px;width:6px;border-radius:3px;background:linear-gradient(var(--c),rgba(255,255,255,.15))}
+.st{position:relative;padding:30px 36px;border-radius:30px;background:var(--card);font-size:44px;font-weight:800;line-height:1.3}
+.st::before{content:"";position:absolute;left:-52px;top:44px;width:30px;height:30px;border-radius:50%;background:var(--c);box-shadow:0 0 0 10px color-mix(in srgb,var(--c) 30%,transparent)}
+.st small{display:block;font-size:30px;font-weight:700;color:var(--c);margin-bottom:6px}
+.st.goal{background:var(--c)} .st.goal small{color:rgba(255,255,255,.8)}
+.stampmark{position:absolute;right:-20px;bottom:-70px;z-index:3;padding:22px 34px;border:8px solid var(--gold);border-radius:22px;color:var(--gold);
+  background:rgba(11,23,48,.9);font-size:52px;font-weight:900;line-height:1.15;text-align:center;box-shadow:0 20px 50px rgba(0,0,0,.5);opacity:0;transform:rotate(-8deg)}
+.stampmark small{display:block;font-size:30px;font-weight:700}
+.scene.on .stampmark{animation:stamp .6s cubic-bezier(.2,.8,.2,1) both;animation-delay:var(--d)}
+.scene.out .stampmark{opacity:1}
+
+/* 카드 목록 */
+.cards{display:flex;flex-direction:column;gap:20px}
+.card{display:flex;align-items:center;gap:26px;padding:28px 34px;border-radius:30px;background:var(--card);font-size:40px;font-weight:800;line-height:1.3}
+.card .ic{flex:none;width:96px;height:96px;border-radius:26px;background:color-mix(in srgb,var(--c) 28%,transparent);display:flex;align-items:center;justify-content:center;font-size:52px}
+.card small{display:block;font-size:30px;font-weight:600;color:var(--dim);margin-top:4px}
+.card .aw{margin-left:auto;flex:none;padding:8px 18px;border-radius:12px;border:3px solid var(--gold);color:var(--gold);font-size:28px;font-weight:800}
+
+/* 불법촬영 점검 장소 */
+.spots{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.spot{padding:28px 16px;border-radius:28px;background:var(--card);text-align:center}
+.spot b{display:block;font-size:76px;font-weight:900;color:var(--c);line-height:1}
+.spot b small{font-size:36px}
+.spot span{display:block;margin-top:12px;font-size:30px;font-weight:700;line-height:1.3}
+
+/* 자체 시책 사진 카드 */
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.tile{position:relative;height:470px;border-radius:30px;overflow:hidden;background:rgba(255,255,255,.05)}
+.tile img{width:100%;height:100%;object-fit:cover;display:block}
+.scene.on .tile img{animation:kb 9s linear both}
+.tile .cv{position:absolute;left:0;right:0;bottom:0;padding:80px 26px 24px;background:linear-gradient(transparent,rgba(5,10,25,.92) 45%);font-size:36px;font-weight:900;line-height:1.25}
+.tile .cv small{display:block;margin-top:6px;font-size:27px;font-weight:600;color:rgba(255,255,255,.75)}
+.tile .cv em{font-style:normal;color:var(--c)}
+
+/* 협업 기관 연결망 */
+.net{position:relative;height:880px}
+.net svg{position:absolute;inset:0;width:100%;height:100%}
+.net line{stroke:var(--c);stroke-width:4;stroke-dasharray:1;stroke-dashoffset:1;opacity:.6}
+.scene.on .net line{animation:draw .5s ease-out both;animation-delay:var(--d)}
+.scene.out .net line{stroke-dashoffset:0}
+@keyframes draw{to{stroke-dashoffset:0}}
+.hub{position:absolute;left:50%;top:50%;width:250px;height:250px;margin:-125px 0 0 -125px;border-radius:50%;background:var(--navy);
+  box-shadow:0 0 0 12px var(--c),0 0 80px color-mix(in srgb,var(--c) 60%,transparent);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-align:center}
+.hub img{width:110px;height:110px;border-radius:50%}
+.hub b{font-size:32px;font-weight:900}
+.node{position:absolute;translate:-50% -50%;padding:14px 24px;border-radius:20px;background:#17264a;border:3px solid color-mix(in srgb,var(--c) 70%,transparent);font-size:30px;font-weight:800;text-align:center;line-height:1.25;white-space:nowrap}
+
+/* 활동 사진 모음 */
+.mosaic{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:300px;gap:16px}
+.mosaic .photo{height:auto;border-radius:24px}
+.mosaic .wide{grid-column:span 2}
+
+/* 클로징 */
+#s-end{justify-content:center;align-items:center;text-align:center;gap:26px}
+.merge{display:flex;width:760px;height:22px;border-radius:11px;overflow:hidden;margin-bottom:30px}
+.merge i{flex:1}
+.scene.on .merge i{animation:mg 1s cubic-bezier(.2,.8,.2,1) both;animation-delay:var(--d)}
+@keyframes mg{from{opacity:0;transform:translateY(var(--y)) scaleX(.2)}to{opacity:1;transform:none}}
+.awards{width:100%;display:flex;flex-direction:column;gap:18px}
+.award{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:26px 40px;border-radius:28px;background:var(--card);font-size:38px;font-weight:800;text-align:left;line-height:1.3}
+.award small{display:block;font-size:28px;color:var(--dim);font-weight:600}
+.award b{color:var(--gold);font-size:46px;font-weight:900;white-space:nowrap}
+.zero{margin-top:30px;font-size:52px;font-weight:800}
+.zero b{display:block;font-size:200px;line-height:1;font-weight:900;color:var(--gold);letter-spacing:-.04em}
+.emblem{width:180px;height:180px;border-radius:50%;object-fit:cover;margin-top:20px;box-shadow:0 0 0 10px rgba(255,255,255,.12),0 20px 60px rgba(0,0,0,.5)}
+#s-end .msg{font-size:56px;line-height:1.35;font-weight:800}
+#s-end .msg em{font-style:normal;color:var(--gold)}
+
+/* 하단 재생 컨트롤: 이전·재생·다음 + 끌어서 이동하는 진행 막대 */
+#ctrl{position:absolute;left:40px;right:40px;bottom:34px;height:96px;z-index:8;display:flex;align-items:center;gap:14px;
+  padding:0 26px;border-radius:48px;background:rgba(0,0,0,.45);backdrop-filter:blur(10px);cursor:default}
+#stage.rec #ctrl{display:none}
+#ctrl button{flex:none;width:64px;height:64px;border:0;border-radius:50%;background:rgba(255,255,255,.12);color:#fff;font-size:28px;cursor:pointer;font-family:inherit}
+#ctrl button#bPlay{width:72px;height:72px;background:#fff;color:var(--navy);font-size:30px}
+#track{position:relative;flex:1;height:64px;cursor:pointer;touch-action:none}
+#track .rail{position:absolute;left:0;right:0;top:27px;height:10px;border-radius:5px;background:rgba(255,255,255,.22)}
+#track .fillbar{position:absolute;left:0;top:27px;height:10px;border-radius:5px;background:#fff;width:0}
+#track .tick{position:absolute;top:22px;width:6px;height:20px;margin-left:-3px;border-radius:3px}
+#track .knob{position:absolute;top:16px;width:32px;height:32px;margin-left:-16px;border-radius:50%;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.4);left:0}
+#clock{flex:none;width:150px;text-align:right;font-size:26px;font-weight:700;color:rgba(255,255,255,.8);font-variant-numeric:tabular-nums}
+
+/* 시작·일시정지·다시보기 */
+.ov{position:absolute;inset:0;z-index:10;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:50px;background:rgba(11,23,48,.86);text-align:center}
+.ov[hidden]{display:none}
+.ov .btn{width:260px;height:260px;border-radius:50%;background:#fff;color:var(--navy);display:flex;align-items:center;justify-content:center;font-size:110px;padding-left:18px}
+.ov h3{font-size:62px;font-weight:800;line-height:1.3}
+.ov p{font-size:36px;color:var(--dim)}
+#pauseIcon{position:absolute;inset:0;z-index:9;display:flex;align-items:center;justify-content:center;pointer-events:none}
+#pauseIcon[hidden]{display:none}
+#pauseIcon div{width:220px;height:220px;border-radius:50%;background:rgba(0,0,0,.55);display:flex;align-items:center;justify-content:center;font-size:90px}
+</style>
+</head>
+<body>
+<div id="stage" data-ch="0">
+  <div class="glow"></div><div class="glow b"></div>
+
+  <div id="bar">
+    <div class="seg" style="--sc:var(--k1)" data-k="1"><div class="track"><div class="fill"></div></div><span>관계성 범죄</span></div>
+    <div class="seg" style="--sc:var(--k2)" data-k="2"><div class="track"><div class="fill"></div></div><span>학대·성폭력</span></div>
+    <div class="seg" style="--sc:var(--k3)" data-k="3"><div class="track"><div class="fill"></div></div><span>실종·청소년</span></div>
+    <div class="seg" style="--sc:var(--k4)" data-k="4"><div class="track"><div class="fill"></div></div><span>협업</span></div>
+  </div>
+
+  <!-- 오프닝 -->
+  <section class="scene" id="s-open" data-ch="0" data-dur="5500">
+    <div class="hero"><img src="photos/0_station.jpg" alt=""></div>
+    <div class="flash" style="--d:600ms"></div>
+    <div class="jolt" style="--jd:600ms">
+      <h1 class="a" style="--anim:slam;--du:.6s;--d:250ms">약자의 곁을,<br><em>끝까지</em></h1>
+    </div>
+    <div class="line a" style="--anim:left;--d:2000ms"><i></i><p>고양경찰서 <b>여성청소년과</b><br>2026 성과</p></div>
+  </section>
+
+  <!-- ① 관계성 범죄 -->
+  <section class="scene" data-ch="1" data-dur="5000">
+    <div class="tag a">① 관계성 범죄 <small>1/5</small></div>
+    <h2 class="a" style="--d:150ms">모든 관계성 범죄를<br><span class="hl">빠짐없이</span> 들여다봅니다</h2>
+    <div class="steps">
+      <div class="step a" style="--anim:left;--d:600ms"><i>1</i><div>경찰서장 주관<br><em>일일 상황점검회의</em></div></div>
+      <div class="step a" style="--anim:left;--d:1000ms"><i>2</i><div>관계성 범죄 <em>전수 모니터링</em></div></div>
+      <div class="step a" style="--anim:left;--d:1400ms"><i>3</i><div>여청과장 주관 <em>전수합동조사</em><small>매일 2회 · 재발위험성 검토</small></div></div>
+      <div class="step goal a" style="--anim:pop;--d:1900ms"><i>✓</i><div>접수 유형 불문 <u>즉일 조사</u><small style="color:rgba(255,255,255,.85)">112신고·고소·진정·방문 상담</small></div></div>
+    </div>
+  </section>
+
+  <section class="scene" data-ch="1" data-dur="5000">
+    <div class="tag a">① 관계성 범죄 <small>2/5</small></div>
+    <h2 class="a" style="--d:150ms">초동조치 <span class="hl">미흡사례 비율</span></h2>
+    <div class="chart a" style="--d:300ms;--anim:fade;--gap:60px;--cw:210px;--ht:600px">
+      <div class="col before"><b><span class="num" data-to="3.3" data-dec="1" data-d="500">0</span>%</b><div class="bv" style="--h:400px;--d:500ms"></div><span>1분기</span></div>
+      <div class="col"><b><span class="num" data-to="0.4" data-dec="1" data-d="900">0</span>%</b><div class="bv" style="--h:49px;--d:900ms"></div><span>2분기</span></div>
+      <div class="col"><b><span class="num" data-to="0.3" data-dec="1" data-d="1300">0</span>%</b><div class="bv" style="--h:36px;--d:1300ms"></div><span>3분기</span></div>
+    </div>
+    <div class="jolt" style="--jd:2250ms">
+      <div class="big a" style="--anim:slam;--du:.55s;--d:1900ms">▼90.9<small>%</small></div>
+    </div>
+    <div class="sub a" style="--d:2600ms;margin-top:-10px">지역관서 9개소 · 36개 팀 순회교육,<br>지역관서장 교육 15회</div>
+    <div class="flash" style="--d:2050ms"></div>
+  </section>
+
+  <section class="scene" data-ch="1" data-dur="5500">
+    <div class="tag a">① 관계성 범죄 <small>3/5</small></div>
+    <h2 class="a" style="--d:150ms">고위험 가해자,<br><span class="hl">적극적으로 격리</span></h2>
+    <div class="sub a" style="--d:350ms;margin-top:-14px">'25.1.~10. → '26.1.~10. 신청 건수</div>
+    <div class="cmp">
+      <div class="crow key a" style="--anim:left;--d:600ms">
+        <div class="l">스토킹 잠정조치 3-2호<small>전자장치 부착</small></div>
+        <div class="v">0 → <b><span class="num" data-to="33" data-d="800" data-du="1000">0</span>건</b><span class="up">+33건</span></div>
+      </div>
+      <div class="crow a" style="--anim:left;--d:1000ms">
+        <div class="l">스토킹 잠정조치 4호<small>유치</small></div>
+        <div class="v">16 → <b><span class="num" data-to="31" data-d="1200" data-du="1000">0</span>건</b><span class="up">+15건</span></div>
+      </div>
+      <div class="crow a" style="--anim:left;--d:1400ms">
+        <div class="l">가정폭력 임시조치 5호<small>유치</small></div>
+        <div class="v">6 → <b><span class="num" data-to="12" data-d="1600" data-du="1000">0</span>건</b><span class="up">100%↑</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="scene" data-ch="1" data-dur="5000">
+    <div class="tag a">① 관계성 범죄 <small>4/5</small></div>
+    <h2 class="a" style="--d:150ms">피해자 곁을<br><span class="hl">끝까지 지킵니다</span></h2>
+    <div class="a" style="--d:500ms">
+      <div class="cap" style="color:var(--dim)">스토킹 피해자 안전조치 <b style="color:#fff">88건 → 130건</b></div>
+      <div class="jolt" style="--jd:1200ms"><div class="big" style="margin-top:10px">▲<span class="num" data-to="47.7" data-dec="1" data-d="500" data-du="900">0</span><small>%</small></div></div>
+    </div>
+    <div class="stats">
+      <div class="stat a" style="--anim:pop;--d:1300ms"><b><span class="num" data-to="100" data-d="1300" data-du="800">0</span><small>%</small></b><span>피해자 사후 콜백</span></div>
+      <div class="stat a" style="--anim:pop;--d:1500ms"><b><span class="num" data-to="12" data-d="1500" data-du="800">0</span><small>건</small></b><span>지능형 홈 CCTV 지원</span></div>
+      <div class="stat a" style="--anim:pop;--d:1700ms"><b><span class="num" data-to="380" data-d="1700" data-du="800">0</span><small>만원</small></b><span>가해자 치료 프로그램 지원</span></div>
+      <div class="stat a" style="--anim:pop;--d:1900ms"><b><span class="num" data-to="5" data-d="1900" data-du="800">0</span><small>회</small></b><span>범죄피해자 통합지원 협의체</span></div>
+    </div>
+  </section>
+
+  <section class="scene" data-ch="1" data-dur="5500">
+    <div class="tag a">① 관계성 범죄 <small>5/5</small></div>
+    <h2 class="a" style="--d:150ms"><span class="hl">우수사례</span><br>모니터링으로 숨은 피해를 찾다</h2>
+    <div class="stampbox">
+      <div class="story">
+        <div class="st a" style="--anim:left;--d:600ms"><small>'26. 6. 4.</small>교제폭력 사건 최초 접수</div>
+        <div class="st a" style="--anim:left;--d:1100ms"><small>모니터링</small>스토킹 피해 사실 추가 인지</div>
+        <div class="st goal a" style="--anim:left;--d:1600ms"><small>즉시 조치</small>구속영장 대비<br>피해자 주거지 앞 CCTV 즉시 설치</div>
+      </div>
+      <div class="stampmark" style="--d:2500ms">도경 장려장</div>
+    </div>
+    <div class="flash" style="--d:2650ms"></div>
+  </section>
+
+  <!-- ② 학대·성폭력 -->
+  <section class="scene" data-ch="2" data-dur="5000">
+    <div class="tag a">② 학대·성폭력 <small>1/3</small></div>
+    <h2 class="a" style="--d:150ms">숨어 있던 노인학대,<br><span class="hl">신고로 드러나게</span></h2>
+    <div class="chart a" style="--d:300ms;--anim:fade;--ht:560px">
+      <div class="col before"><b><span class="num" data-to="195" data-d="500">0</span>건</b><div class="bv" style="--h:330px;--d:500ms"></div><span>'25년</span></div>
+      <div class="col"><b><span class="num" data-to="230" data-d="1000">0</span>건</b><div class="bv" style="--h:390px;--d:1000ms"></div><span>'26년</span></div>
+    </div>
+    <div class="jolt" style="--jd:2050ms">
+      <div class="a" style="--anim:slam;--du:.55s;--d:1700ms">
+        <div class="big" style="font-size:150px">▲17.95<small>%</small></div>
+        <div class="cap" style="margin-top:10px">예방·신고 활성화 홍보 후 노인학대 신고</div>
+      </div>
+    </div>
+    <div class="sub a" style="--d:2500ms;margin-top:-10px">노인보호전문기관 MOU 후 연계 85 → 88건</div>
+  </section>
+
+  <section class="scene" data-ch="2" data-dur="4500">
+    <div class="tag a">② 학대·성폭력 <small>2/3</small></div>
+    <h2 class="a" style="--d:150ms">아동·노인·장애인,<br><span class="hl">맞춤형으로 보호</span></h2>
+    <div class="cards">
+      <div class="card a" style="--anim:left;--d:500ms"><span class="ic">🧒</span><div>다문화 피해아동 맞춤형 지원<small>통역인 섭외·법원 동행 → 피해아동보호명령 결정</small></div></div>
+      <div class="card a" style="--anim:left;--d:850ms"><span class="ic">💰</span><div>피해아동 경제적 지원<small>약 210만원</small></div><span class="aw">자경위 표창</span></div>
+      <div class="card a" style="--anim:left;--d:1200ms"><span class="ic">👵</span><div>다기능 협업 노인학대 예방교육<small>2회 · 200명</small></div></div>
+      <div class="card a" style="--anim:left;--d:1550ms"><span class="ic">🤝</span><div>장애인학대 예방 합동 캠페인<small>장애인의 날 (4.21)</small></div></div>
+    </div>
+  </section>
+
+  <section class="scene" data-ch="2" data-dur="5500">
+    <div class="tag a">② 학대·성폭력 <small>3/3</small></div>
+    <div class="photo a" style="--d:100ms;--anim:fade;height:430px">
+      <img src="photos/march.jpg" alt="" style="object-position:50% 70%">
+      <div class="chip"><b>●</b>불법촬영 예방 거리행진</div>
+    </div>
+    <h2 class="a" style="--d:300ms">불법촬영, <span class="hl">먼저 찾아냅니다</span></h2>
+    <div class="spots">
+      <div class="spot a" style="--anim:pop;--d:700ms"><b>3<small>개소</small></b><span>코레일 역사<br>(능곡역 등)</span></div>
+      <div class="spot a" style="--anim:pop;--d:900ms"><b>5<small>개교</small></b><span>초·중교<br>화장실·휴게실</span></div>
+      <div class="spot a" style="--anim:pop;--d:1100ms"><b>10<small>개소</small></b><span>물놀이<br>시설</span></div>
+    </div>
+    <div class="jolt" style="--jd:2050ms">
+      <div class="a" style="--anim:slam;--du:.55s;--d:1700ms">
+        <div class="cap" style="color:var(--dim)">성폭력 범죄 검거 <b style="color:#fff">181건 → 208건</b></div>
+        <div class="big" style="font-size:150px;margin-top:6px">▲14.9<small>%</small></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ③ 실종·청소년 -->
+  <section class="scene" data-ch="3" data-dur="4500">
+    <div class="tag a">③ 실종·청소년 <small>1/4</small></div>
+    <div class="photo a" style="--d:100ms;--anim:fade;height:470px">
+      <img src="photos/finger.jpg" alt="">
+      <div class="chip"><b>●</b>찾아가는 지문 사전등록</div>
+    </div>
+    <h2 class="a" style="--d:300ms">어린이집·장애인 보호기관<br><span class="hl">직접 찾아가 등록</span></h2>
+    <div class="cap a" style="--d:800ms">찾아가는 지문 등 사전등록제 <span class="hl" style="font-weight:900">29개소</span></div>
+    <div class="a" style="--d:1200ms">
+      <div class="cap" style="color:var(--dim)">사전등록 <b style="color:#fff">835건 → 996건</b></div>
+      <div class="big" style="font-size:150px;margin-top:6px">▲<span class="num" data-to="19.3" data-dec="1" data-d="1200" data-du="900">0</span><small>%</small></div>
+    </div>
+  </section>
+
+  <section class="scene" data-ch="3" data-dur="5000">
+    <div class="tag a">③ 실종·청소년 <small>2/4</small></div>
+    <h2 class="a" style="--d:150ms">학교로 찾아가는<br><span class="hl">범죄예방교육</span></h2>
+    <div class="a" style="--d:500ms">
+      <div class="big" style="font-size:190px"><span class="num" data-to="18832" data-d="500" data-du="1300">0</span><small>명</small></div>
+      <div class="cap" style="margin-top:10px">관내 학교 범죄예방교육 <span class="hl" style="font-weight:900">93회</span> · 야차룰·도박 등</div>
+    </div>
+    <div class="stats">
+      <div class="stat a" style="--anim:pop;--d:1400ms"><b><span class="num" data-to="51" data-d="1400" data-du="800">0</span><small>회</small></b><span>학생참여형 Hi-Five+<br>학교폭력 예방 캠페인</span></div>
+      <div class="stat a" style="--anim:pop;--d:1600ms"><b><span class="num" data-to="6" data-d="1600" data-du="800">0</span><small>회</small></b><span>도박 예방 캠페인<br>(5개교)</span></div>
+      <div class="stat a" style="--anim:pop;--d:1800ms"><b><span class="num" data-to="400" data-d="1800" data-du="800">0</span><small>명</small></b><span>중부대 사범학부<br>학교폭력·성범죄 예방교육</span></div>
+      <div class="stat a" style="--anim:pop;--d:2000ms"><b><span class="num" data-to="112" data-d="2000" data-du="800">0</span><small>점</small></b><span>청소년 범죄예방 공모전<br>수상작 전시</span></div>
+    </div>
+  </section>
+
+  <section class="scene" data-ch="3" data-dur="5000">
+    <div class="tag a">③ 실종·청소년 <small>3/4</small></div>
+    <h2 class="a" style="--d:150ms">위기청소년,<br><span class="hl">먼저 찾아 선도</span></h2>
+    <div class="jolt" style="--jd:950ms">
+      <div class="a" style="--anim:slam;--du:.55s;--d:600ms">
+        <div class="cap" style="color:var(--dim)">촉법 사건 <b style="color:#fff">84명 → 76명</b> <small style="font-size:30px">('25.6.~9. 대비)</small></div>
+        <div class="big" style="margin-top:6px">▼10<small>%</small></div>
+      </div>
+    </div>
+    <div class="cmp">
+      <div class="crow a" style="--anim:left;--d:1500ms">
+        <div class="l">청소년 선도 이수율<small>전년 대비</small></div>
+        <div class="v"><b>▲73%</b><span class="up">증가</span></div>
+      </div>
+      <div class="crow a" style="--anim:left;--d:1850ms">
+        <div class="l">우범송치<small>보호시설 입소</small></div>
+        <div class="v">3 → <b>4명</b><span class="up">33%↑</span></div>
+      </div>
+      <div class="crow a" style="--anim:left;--d:2200ms">
+        <div class="l">학교 밖 청소년 발견<small>전문기관 연계</small></div>
+        <div class="v"><b><span class="num" data-to="72" data-d="2200" data-du="800">0</span>명</b></div>
+      </div>
+    </div>
+    <div class="flash" style="--d:750ms"></div>
+  </section>
+
+  <section class="scene" data-ch="3" data-dur="6000">
+    <div class="tag a">③ 실종·청소년 <small>4/4</small></div>
+    <h2 class="a" style="--d:150ms"><span class="hl">자체 시책</span>으로 넓힌 청소년 보호</h2>
+    <div class="tiles">
+      <div class="tile a" style="--anim:pop;--d:400ms"><img src="photos/cgv.jpg" alt="" style="object-position:50% 40%">
+        <div class="cv"><em>CGV</em> 협업<small>'청소년 도박' 자진신고 홍보영상<br>1년 약 800만원 예산 절감</small></div></div>
+      <div class="tile a" style="--anim:pop;--d:700ms"><img src="photos/savezone.jpg" alt="">
+        <div class="cv"><em>세이브존</em> 아트갤러리<small>7년 연속 · 범죄예방 공모전<br>수상작 112점 화정역 전시</small></div></div>
+      <div class="tile a" style="--anim:pop;--d:1000ms"><img src="photos/jb.jpg" alt="">
+        <div class="cv"><em>JB 공공안전지킴이</em><small>봉사단 2기 발대식<br>중부대 학생 50여명</small></div></div>
+      <div class="tile a" style="--anim:pop;--d:1300ms"><img src="photos/agreement.jpg" alt="" style="object-position:50% 60%">
+        <div class="cv"><em>청소년 마약 예방</em><small>고양서–청소년중독과치유재단<br>업무협약</small></div></div>
+    </div>
+    <div class="sub a" style="--d:1800ms">+ 열품타 협업 배너 · '더 하모니' 동아리</div>
+  </section>
+
+  <!-- ④ 협업 -->
+  <section class="scene" data-ch="4" data-dur="5000">
+    <div class="tag a">④ 협업 <small>1/2</small></div>
+    <h2 class="a" style="--d:150ms">혼자가 아니라,<br><span class="hl">함께 지킵니다</span></h2>
+    <div class="net" id="net">
+      <svg viewBox="0 0 900 880" preserveAspectRatio="none"></svg>
+      <div class="hub a" style="--anim:pop;--d:300ms"><img src="photos/emblem.jpg" alt=""><b>고양경찰서</b></div>
+    </div>
+  </section>
+
+  <section class="scene" data-ch="4" data-dur="4500">
+    <div class="tag a">④ 협업 <small>2/2</small></div>
+    <div class="mosaic">
+      <div class="photo wide a" style="--anim:pop;--d:100ms"><img src="photos/mou.jpg" alt=""><div class="chip"><b>●</b>MOU 체결</div></div>
+      <div class="photo a" style="--anim:pop;--d:250ms"><img src="photos/night_patrol.jpg" alt=""></div>
+      <div class="photo a" style="--anim:pop;--d:400ms"><img src="photos/edu_local.jpg" alt=""></div>
+      <div class="photo wide a" style="--anim:pop;--d:550ms"><img src="photos/edu_agency.jpg" alt=""><div class="chip"><b>●</b>유관기관 교육</div></div>
+    </div>
+    <h2 class="a" style="--d:1000ms">현장의 활동을<br><span class="hl">널리 알렸습니다</span></h2>
+    <div class="stats">
+      <div class="stat a" style="--anim:pop;--d:1400ms"><b><span class="num" data-to="7" data-d="1400" data-du="600">0</span><small>곳</small></b><span>언론보도</span></div>
+      <div class="stat a" style="--anim:pop;--d:1600ms"><b><span class="num" data-to="5" data-d="1600" data-du="600">0</span><small>곳</small></b><span>SNS·맘카페 등<br>온·오프라인 홍보</span></div>
+    </div>
+  </section>
+
+  <!-- 클로징 -->
+  <section class="scene" id="s-end" data-ch="5" data-dur="7000">
+    <div class="merge">
+      <i style="background:var(--k1);--y:-160px;--d:0ms"></i>
+      <i style="background:var(--k2);--y:160px;--d:120ms"></i>
+      <i style="background:var(--k3);--y:-160px;--d:240ms"></i>
+      <i style="background:var(--k4);--y:160px;--d:360ms"></i>
+    </div>
+    <div class="awards">
+      <div class="award a" style="--anim:left;--d:500ms"><div>범죄수익보전 우수관서<small>'26.4. 여청수사 4팀</small></div><b>본청 장려장</b></div>
+      <div class="award a" style="--anim:left;--d:750ms"><div>관계성 범죄 우수사례<small>'26년 2분기</small></div><b>도경 장려장</b></div>
+      <div class="award a" style="--anim:left;--d:1000ms"><div>관계성 범죄 우수사례<small>'26년 3분기</small></div><b>자경위 표창</b></div>
+      <div class="award a" style="--anim:left;--d:1250ms"><div>자랑스러운 자치경찰<small>'26년 제2회</small></div><b>선정</b></div>
+    </div>
+    <div class="jolt" style="--jd:2150ms">
+      <div class="zero a" style="--anim:slam;--du:.55s;--d:1800ms">관계성 범죄 재범<b>0</b></div>
+    </div>
+    <img class="emblem a" src="photos/emblem.jpg" alt="고양경찰서" style="--anim:pop;--d:3300ms">
+    <div class="msg a" style="--d:3700ms">약자의 곁을 끝까지 지키는<br><em>고양경찰서 여성청소년과</em></div>
+    <div class="flash" style="--d:1950ms"></div>
+  </section>
+
+  <footer>고양경찰서 여성청소년과 · 2026 성과</footer>
+
+  <div id="ctrl">
+    <button id="bPrev" aria-label="이전 장면">⏮</button>
+    <button id="bPlay" aria-label="재생/일시정지">▶</button>
+    <button id="bNext" aria-label="다음 장면">⏭</button>
+    <div id="track"><div class="rail"></div><div class="fillbar"></div><div class="knob"></div></div>
+    <span id="clock">0:00 / 0:00</span>
+  </div>
+
+  <div id="pauseIcon" hidden><div>❚❚</div></div>
+  <div class="ov" id="start">
+    <div class="btn">▶</div>
+    <h3>고양경찰서 여성청소년과<br>2026 성과</h3>
+    <p>터치하여 재생 · 약 1분</p>
+  </div>
+  <div class="ov" id="replay" hidden>
+    <div class="btn" style="padding:0">↻</div>
+    <h3>다시 보기</h3>
+  </div>
+</div>
+
+<!-- 배경음악: motion/bgm.mp3 파일을 넣으면 자동 재생 -->
+<audio id="bgm" src="bgm.mp3" preload="auto"></audio>
+
+<script>
+(() => {
+  const stage = document.getElementById('stage');
+  const S = [...stage.querySelectorAll('.scene')];
+  // 전체 템포: 장면 길이·등장 시점·카운트 속도를 한 번에 압축 (1 = 원래 속도)
+  const SPEED = 0.8;
+  S.forEach(s => { s.dataset.dur = Math.round(s.dataset.dur * SPEED); });
+  const DUR = S.map(s => +s.dataset.dur);
+  const CH = S.map(s => +s.dataset.ch);
+  const COLORS = ['var(--navy)', 'var(--k1)', 'var(--k2)', 'var(--k3)', 'var(--k4)', 'var(--navy)'];
+  const segs = [...stage.querySelectorAll('.seg')];
+  const bgm = document.getElementById('bgm');
+  let idx = -1, t = 0, playing = false, started = false, last = performance.now();
+
+  // 화면 크기에 맞춰 무대 축소
+  const fit = () => stage.style.setProperty('--s', Math.min(innerWidth / 1080, innerHeight / 1920));
+  addEventListener('resize', fit); fit();
+
+  // 협업 기관 연결망: 가운데 고양경찰서, 둘레에 기관 (보고서 기재 기관)
+  const ORGS = ['경기북서부\n노인보호전문기관', '고양시청', '장애인\n성폭력상담소', '고양시 장애인\n보건의료센터', '교육청',
+    '코레일', '범죄피해자\n지원센터', '청소년중독과\n치유재단', 'CGV', '중부대학교'];
+  const net = document.getElementById('net');
+  let lines = '';
+  net.insertAdjacentHTML('beforeend', ORGS.map((name, i) => {
+    const r = i * 2 * Math.PI / ORGS.length - Math.PI / 2;
+    const x = 450 + Math.cos(r) * 330, y = 440 + Math.sin(r) * 360, d = 700 + i * 110;
+    lines += `<line pathLength="1" x1="450" y1="440" x2="${x}" y2="${y}" style="--d:${d}ms"/>`;
+    return `<div class="node a" style="--anim:pop;--d:${d + 150}ms;left:${x / 9}%;top:${y / 8.8}%">${name.replace('\n', '<br>')}</div>`;
+  }).join(''));
+  net.querySelector('svg').innerHTML = lines;
+
+  stage.querySelectorAll('[style]').forEach(el => ['--d', '--jd', '--du'].forEach(name => {
+    const v = el.style.getPropertyValue(name).trim();
+    if (v) el.style.setProperty(name, parseFloat(v) * SPEED + (v.endsWith('ms') ? 'ms' : 's'));
+  }));
+  stage.querySelectorAll('[data-d], [data-du]').forEach(el => {
+    if (el.dataset.d) el.dataset.d = el.dataset.d * SPEED;
+    el.dataset.du = (el.dataset.du || 1200) * SPEED;
+  });
+
+  // 챕터별 장면 시작 위치
+  const chapters = {};
+  S.forEach((s, i) => { (chapters[CH[i]] ||= []).push(i); });
+
+  const fmt = (v, el) => {
+    const dec = +el.dataset.dec || 0;
+    return v.toLocaleString('ko-KR', {minimumFractionDigits: dec, maximumFractionDigits: dec});
+  };
+
+  // 전체 시간축: 장면별 시작 시점과 총 길이
+  const START = DUR.map((_, i) => DUR.slice(0, i).reduce((a, b) => a + b, 0));
+  const TOTAL = START[S.length - 1] + DUR[S.length - 1];
+  const track = document.getElementById('track');
+  const mmss = ms => { const s = Math.floor(ms / 1000); return Math.floor(s / 60) + ':' + String(s % 60).padStart(2, '0'); };
+  // 챕터가 바뀌는 지점에 색 눈금
+  S.forEach((s, i) => {
+    if (i && CH[i] !== CH[i - 1] && CH[i] <= 4)
+      track.insertAdjacentHTML('beforeend', `<i class="tick" style="left:${START[i] / TOTAL * 100}%;background:${COLORS[CH[i]]}"></i>`);
+  });
+
+  function go(i) {
+    const prev = S[idx];
+    if (prev && prev !== S[i]) {
+      prev.classList.remove('on'); prev.classList.add('out');
+      setTimeout(() => { if (!prev.classList.contains('on')) prev.classList.remove('out'); }, 460);
+    }
+    idx = i; t = 0;
+    const s = S[i];
+    s.classList.remove('on', 'out'); void s.offsetWidth; s.classList.add('on');
+    stage.style.setProperty('--c', COLORS[CH[i]]);
+    stage.dataset.ch = CH[i];
+  }
+
+  function update() {
+    if (idx < 0) return;
+    S[idx].querySelectorAll('.num').forEach(el => {
+      const d = +el.dataset.d || 0, du = +el.dataset.du || 1200;
+      const p = Math.min(Math.max((t - d) / du, 0), 1);
+      el.textContent = fmt(+el.dataset.to * (1 - Math.pow(1 - p, 3)), el);
+    });
+    const g = Math.min(START[idx] + t, TOTAL);
+    track.querySelector('.fillbar').style.width = track.querySelector('.knob').style.left = g / TOTAL * 100 + '%';
+    document.getElementById('clock').textContent = mmss(g) + ' / ' + mmss(TOTAL);
+    const cur = CH[idx];
+    segs.forEach(seg => {
+      const kk = +seg.dataset.k, list = chapters[kk];
+      let f = 0;
+      if (cur > kk) f = 1;
+      else if (cur === kk) {
+        const total = list.reduce((a, j) => a + DUR[j], 0);
+        const done = list.filter(j => j < idx).reduce((a, j) => a + DUR[j], 0);
+        f = (done + t) / total;
+      }
+      seg.querySelector('.fill').style.width = Math.min(f, 1) * 100 + '%';
+      seg.classList.toggle('cur', cur === kk);
+    });
+  }
+
+  function tick(now) {
+    const dt = Math.min(now - last, 100); last = now;
+    if (playing) {
+      t += dt;
+      if (t >= DUR[idx]) {
+        if (idx < S.length - 1) go(idx + 1);
+        else { t = DUR[idx]; playing = false; document.getElementById('replay').hidden = false; bgm.pause(); }
+      }
+    }
+    update();
+    requestAnimationFrame(tick);
+  }
+
+  function setPaused(p) {
+    playing = !p;
+    stage.classList.toggle('paused', p);
+    document.getElementById('pauseIcon').hidden = !p;
+    p ? bgm.pause() : bgm.play().catch(() => {});
+    if (!p && idx >= 0) S[idx].getAnimations({subtree: true}).forEach(a => { if (a.playState === 'paused') a.play(); });
+    document.getElementById('bPlay').textContent = p ? '▶' : '❚❚';
+  }
+
+  function start(from = 0) {
+    started = true;
+    document.getElementById('start').hidden = true;
+    document.getElementById('replay').hidden = true;
+    if (from === 0) { try { bgm.currentTime = 0; } catch (e) {} }
+    playing = true; go(from); setPaused(false);
+  }
+
+  document.getElementById('start').addEventListener('click', e => { e.stopPropagation(); start(); });
+  document.getElementById('replay').addEventListener('click', e => { e.stopPropagation(); start(); });
+  segs.forEach(seg => seg.addEventListener('click', e => {
+    if (!started) return;
+    e.stopPropagation();
+    document.getElementById('replay').hidden = true;
+    playing = true; go(chapters[+seg.dataset.k][0]); setPaused(false);
+  }));
+  stage.addEventListener('click', () => { if (started && document.getElementById('replay').hidden) setPaused(playing); });
+
+  // 특정 시점(ms)으로 이동해 멈춤 — 검수·MP4 프레임 출력용
+  function seek(ms) {
+    let i = 0;
+    while (i < S.length - 1 && ms >= DUR[i]) { ms -= DUR[i]; i++; }
+    started = true;
+    document.getElementById('start').hidden = true;
+    playing = false; go(i); t = Math.min(ms, DUR[i]);
+    S[i].getAnimations({subtree: true}).forEach(a => {
+      if (t >= a.effect.getComputedTiming().endTime) a.finish();
+      else { a.pause(); a.currentTime = t; }
+    });
+    update();
+  }
+  window.seek = seek;
+
+  // 사용자 이동: 지정 시점으로 옮긴 뒤 재생 중이었으면 이어서 재생
+  function jump(ms, resume) {
+    document.getElementById('replay').hidden = true;
+    seek(Math.max(0, Math.min(ms, TOTAL - 1)));
+    setPaused(!resume);
+  }
+  const ctrl = document.getElementById('ctrl');
+  ['click', 'pointerdown'].forEach(ev => ctrl.addEventListener(ev, e => e.stopPropagation()));
+  document.getElementById('bPlay').addEventListener('click', () => {
+    if (!started) return start();
+    if (!document.getElementById('replay').hidden) return start();
+    setPaused(playing);
+  });
+  document.getElementById('bPrev').addEventListener('click', () => jump(t > 800 || idx === 0 ? START[idx] : START[idx - 1], playing || !started));
+  document.getElementById('bNext').addEventListener('click', () => { if (idx < S.length - 1) jump(START[idx + 1], playing || !started); });
+  let drag = null;
+  const msAt = e => { const r = track.getBoundingClientRect(); return (e.clientX - r.left) / r.width * TOTAL; };
+  track.addEventListener('pointerdown', e => {
+    drag = {resume: playing || !started};
+    track.setPointerCapture(e.pointerId);
+    jump(msAt(e), false);
+  });
+  track.addEventListener('pointermove', e => { if (drag) jump(msAt(e), false); });
+  const endDrag = e => { if (!drag) return; jump(msAt(e), drag.resume); drag = null; };
+  track.addEventListener('pointerup', endDrag);
+  track.addEventListener('pointercancel', endDrag);
+  addEventListener('keydown', e => {
+    if (!started) return;
+    if (e.key === 'ArrowRight' && idx < S.length - 1) jump(START[idx + 1], playing);
+    if (e.key === 'ArrowLeft') jump(START[Math.max(0, idx - (t > 800 ? 0 : 1))], playing);
+    if (e.key === ' ') { e.preventDefault(); setPaused(playing); }
+  });
+
+  // ?autoplay=1 : 녹화용 자동 시작, ?t=ms : 해당 시점 정지 화면, ?render=1 : 컨트롤 숨김
+  const q = new URLSearchParams(location.search);
+  if (q.has('render')) stage.classList.add('rec');
+  if (q.has('t')) seek(+q.get('t'));
+  else if (q.has('autoplay')) start();
+  requestAnimationFrame(tick);
+})();
+</script>
+</body>
+</html>
