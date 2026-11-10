@@ -44,8 +44,8 @@ footer{position:absolute;left:0;right:0;bottom:150px;text-align:center;font-size
 .scene{position:absolute;inset:0;padding:240px 90px 210px;display:flex;flex-direction:column;gap:38px;visibility:hidden}
 .scene[data-ch="1"]{--c:var(--k1)} .scene[data-ch="2"]{--c:var(--k2)}
 .scene[data-ch="3"]{--c:var(--k3)} .scene[data-ch="4"]{--c:var(--k4)}
-.scene.on{visibility:visible;animation:sceneIn .5s both}
-.scene.out{visibility:visible;animation:sceneOut .45s both}
+.scene.on{visibility:visible;animation:sceneIn .8s both}
+.scene.out{visibility:visible;animation:sceneOut .75s both}
 .scene .a{opacity:0}
 .scene.out .a{opacity:1}
 .scene.on .a{animation:var(--anim,up) var(--du,.75s) cubic-bezier(.2,.8,.2,1) both;animation-delay:var(--d,0ms)}
@@ -157,9 +157,9 @@ h2{font-size:74px;line-height:1.22;font-weight:800;letter-spacing:-.02em}
 .pt small{display:block;margin-bottom:10px;font-size:32px;font-weight:700;color:var(--c)}
 .pcnt{position:absolute;right:40px;top:40px;padding:8px 22px;border-radius:14px;background:var(--c);font-size:30px;font-weight:800}
 .pcnt b{font-size:40px;font-weight:900}
-.marks{display:flex;gap:30px}
-.pmark{padding:16px 30px;border:8px solid var(--gold);border-radius:20px;color:var(--gold);background:rgba(11,23,48,.9);
-  font-size:58px;font-weight:900;white-space:nowrap;box-shadow:0 20px 50px rgba(0,0,0,.5);opacity:0;transform:rotate(var(--r))}
+.marks{display:flex;flex-wrap:wrap;gap:18px 22px}
+.pmark{padding:10px 22px;border:6px solid var(--gold);border-radius:16px;color:var(--gold);background:rgba(11,23,48,.9);
+  font-size:40px;font-weight:900;white-space:nowrap;box-shadow:0 20px 50px rgba(0,0,0,.5);opacity:0;transform:rotate(var(--r))}
 .scene.on .pmark{animation:pstamp .6s cubic-bezier(.2,.8,.2,1) both;animation-delay:var(--d)}
 .scene.out .pmark{opacity:1}
 @keyframes pstamp{0%{opacity:0;transform:scale(3.2) rotate(var(--r))}55%{opacity:1;transform:scale(.9) rotate(var(--r))}100%{opacity:1;transform:rotate(var(--r))}}
@@ -207,13 +207,13 @@ h2{font-size:74px;line-height:1.22;font-weight:800;letter-spacing:-.02em}
 .mosaic .wide{grid-column:span 2}
 
 /* 클로징 */
-#s-end{justify-content:center;align-items:center;text-align:center;gap:20px}
+#s-end{justify-content:center;align-items:center;text-align:center;gap:26px}
 .merge{display:flex;width:760px;height:22px;border-radius:11px;overflow:hidden;margin-bottom:30px}
 .merge i{flex:1}
 .scene.on .merge i{animation:mg 1s cubic-bezier(.2,.8,.2,1) both;animation-delay:var(--d)}
 @keyframes mg{from{opacity:0;transform:translateY(var(--y)) scaleX(.2)}to{opacity:1;transform:none}}
-.awards{width:100%;display:flex;flex-direction:column;gap:14px}
-.award{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:20px 40px;border-radius:28px;background:var(--card);font-size:38px;font-weight:800;text-align:left;line-height:1.3}
+.awards{width:100%;display:flex;flex-direction:column;gap:18px}
+.award{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:26px 40px;border-radius:28px;background:var(--card);font-size:38px;font-weight:800;text-align:left;line-height:1.3}
 .award small{display:block;font-size:28px;color:var(--dim);font-weight:600}
 .award b{color:var(--gold);font-size:46px;font-weight:900;white-space:nowrap}
 .zero{margin-top:30px;font-size:52px;font-weight:800}
@@ -446,29 +446,33 @@ h2{font-size:74px;line-height:1.22;font-weight:800;letter-spacing:-.02em}
     <div class="press">
       <div class="jolt" style="--jd:1630ms">
         <div class="pcard a" style="--anim:left;--d:400ms">
-          <div class="pcnt">언론보도 <b>3</b>곳</div>
+          <div class="pcnt">언론보도 <b>4</b>곳</div>
           <div class="pt"><small>'26. 10. 17.</small>청소년 어울림마당 '아트락'<br>마약 예방 캠페인</div>
           <div class="marks">
-            <span class="pmark" style="--d:1300ms;--r:-7deg">현대일보</span>
-            <span class="pmark" style="--d:1300ms;--r:5deg">고양신문</span>
+            <span class="pmark" style="--d:1300ms;--r:-6deg">고양신문</span>
+            <span class="pmark" style="--d:1300ms;--r:4deg">현대일보</span>
+            <span class="pmark" style="--d:1300ms;--r:-4deg">시사법률신문</span>
+            <span class="pmark" style="--d:1300ms;--r:5deg">데일리굿뉴스</span>
           </div>
         </div>
       </div>
-      <div class="jolt" style="--jd:2830ms"><div class="jolt" style="--jd:3180ms">
+      <div class="jolt" style="--jd:2830ms"><div class="jolt" style="--jd:3180ms"><div class="jolt" style="--jd:3530ms">
         <div class="pcard a" style="--anim:left;--d:700ms">
           <div class="bg"><img src="photos/night_patrol.jpg" alt="" style="object-position:50% 70%"></div>
-          <div class="pcnt">언론보도 <b>4</b>곳</div>
+          <div class="pcnt">언론보도 <b>3</b>곳</div>
           <div class="pt"><small>'26. 10. 14.</small>청소년치안정책자문단 발대식<br>· 합동 비행 예방 순찰</div>
           <div class="marks">
-            <span class="pmark" style="--d:2500ms;--r:6deg">메트로신문</span>
-            <span class="pmark" style="--d:2850ms;--r:-6deg">자유로신문</span>
+            <span class="pmark" style="--d:2500ms;--r:6deg">서울매일신문</span>
+            <span class="pmark" style="--d:2850ms;--r:-5deg">고양신문</span>
+            <span class="pmark" style="--d:3200ms;--r:4deg">메트로신문</span>
           </div>
         </div>
-      </div></div>
+      </div></div></div>
     </div>
     <div class="flash" style="--d:1630ms"></div>
     <div class="flash" style="--d:2830ms"></div>
     <div class="flash" style="--d:3180ms"></div>
+    <div class="flash" style="--d:3530ms"></div>
   </section>
 
   <!-- ④ 협업 -->
@@ -514,12 +518,8 @@ h2{font-size:74px;line-height:1.22;font-weight:800;letter-spacing:-.02em}
       <div class="award a" style="--anim:left;--d:1000ms"><div>다문화 피해아동 보호·지원<small>아동학대</small></div><b>자경위 표창</b></div>
       <div class="award a" style="--anim:left;--d:1200ms"><div>자랑스러운 자치경찰<small>'26년 제2회</small></div><b>선정</b></div>
     </div>
-    <div class="jolt" style="--jd:2150ms">
-      <div class="zero a" style="--anim:slam;--du:.55s;--d:1800ms">관계성 범죄 재범<b>0</b></div>
-    </div>
-    <img class="emblem a" src="photos/emblem.jpg" alt="고양경찰서" style="--anim:pop;--d:3300ms">
-    <div class="msg a" style="--d:3700ms">약자의 곁을 끝까지 지키는<br><em>고양경찰서 여성청소년과</em></div>
-    <div class="flash" style="--d:1950ms"></div>
+    <img class="emblem a" src="photos/emblem.jpg" alt="고양경찰서" style="--anim:pop;--d:1800ms">
+    <div class="msg a" style="--d:2200ms">약자의 곁을 끝까지 지키는<br><em>고양경찰서 여성청소년과</em></div>
   </section>
 
   <footer>고양경찰서 여성청소년과 · 2026 성과</footer>
@@ -630,7 +630,7 @@ h2{font-size:74px;line-height:1.22;font-weight:800;letter-spacing:-.02em}
     const prev = S[idx];
     if (prev && prev !== S[i]) {
       prev.classList.remove('on'); prev.classList.add('out');
-      setTimeout(() => { if (!prev.classList.contains('on')) prev.classList.remove('out'); }, 460);
+      setTimeout(() => { if (!prev.classList.contains('on')) prev.classList.remove('out'); }, 760);
     }
     idx = i; t = 0;
     const s = S[i];
