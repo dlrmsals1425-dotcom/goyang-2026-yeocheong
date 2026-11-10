@@ -598,6 +598,26 @@ h2{font-size:74px;line-height:1.22;font-weight:800;letter-spacing:-.02em}
   // 전체 시간축: 장면별 시작 시점과 총 길이
   const START = DUR.map((_, i) => DUR.slice(0, i).reduce((a, b) => a + b, 0));
   const TOTAL = START[S.length - 1] + DUR[S.length - 1];
+  // 음악도 영상의 재생·일시정지·구간 이동을 따라갑니다.
+  function syncMusic(force = false) {
+    if (idx < 0) return;
+    const seconds = Math.max(0, Math.min((START[idx] + t) / 1000, TOTAL / 1000));
+    const target = seconds * bgm.playbackRate;
+    if (Number.isFinite(bgm.duration) && Math.abs(bgm.currentTime - target) > (force ? 0.02 : 0.35)) {
+      try { bgm.currentTime = Math.min(target, Math.max(0, bgm.duration - 0.01)); } catch (e) {}
+    }
+    bgm.volume = 0.6 * Math.max(0, Math.min(1, seconds / 0.7, (TOTAL / 1000 - seconds) / 1.6));
+  }
+  function fitMusic() {
+    if (!Number.isFinite(bgm.duration) || bgm.duration <= 0) return;
+    // Ode To Life를 최신 영상 길이(70초)에 맞추고 음높이는 유지합니다.
+    const rate = bgm.duration / (TOTAL / 1000);
+    bgm.playbackRate = rate >= 0.9 && rate <= 1.1 ? rate : 1;
+    bgm.preservesPitch = true;
+    syncMusic(true);
+  }
+  bgm.addEventListener('loadedmetadata', fitMusic);
+  if (bgm.readyState >= 1) fitMusic();
   const track = document.getElementById('track');
   const mmss = ms => { const s = Math.floor(ms / 1000); return Math.floor(s / 60) + ':' + String(s % 60).padStart(2, '0'); };
   // 챕터가 바뀌는 지점에 색 눈금
@@ -627,6 +647,7 @@ h2{font-size:74px;line-height:1.22;font-weight:800;letter-spacing:-.02em}
       el.textContent = fmt(+el.dataset.to * (1 - Math.pow(1 - p, 3)), el);
     });
     const g = Math.min(START[idx] + t, TOTAL);
+    syncMusic();
     track.querySelector('.fillbar').style.width = track.querySelector('.knob').style.left = g / TOTAL * 100 + '%';
     document.getElementById('clock').textContent = mmss(g) + ' / ' + mmss(TOTAL);
     const cur = CH[idx];
@@ -661,6 +682,8 @@ h2{font-size:74px;line-height:1.22;font-weight:800;letter-spacing:-.02em}
     playing = !p;
     stage.classList.toggle('paused', p);
     document.getElementById('pauseIcon').hidden = !p;
+    syncMusic(true);
+    if (!p) last = performance.now();
     p ? bgm.pause() : bgm.play().catch(() => {});
     if (!p && idx >= 0) S[idx].getAnimations({subtree: true}).forEach(a => { if (a.playState === 'paused') a.play(); });
     document.getElementById('bPlay').textContent = p ? '▶' : '❚❚';
@@ -690,12 +713,14 @@ h2{font-size:74px;line-height:1.22;font-weight:800;letter-spacing:-.02em}
     while (i < S.length - 1 && ms >= DUR[i]) { ms -= DUR[i]; i++; }
     started = true;
     document.getElementById('start').hidden = true;
+    bgm.pause();
     playing = false; go(i); t = Math.min(ms, DUR[i]);
     S[i].getAnimations({subtree: true}).forEach(a => {
       if (t >= a.effect.getComputedTiming().endTime) a.finish();
       else { a.pause(); a.currentTime = t; }
     });
     update();
+    syncMusic(true);
   }
   window.seek = seek;
 
