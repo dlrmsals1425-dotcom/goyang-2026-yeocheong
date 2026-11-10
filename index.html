@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
 <title>고양경찰서 여성청소년과 2026 성과</title>
-<meta name="description" content="약자의 곁을, 끝까지 — 관계성 범죄·학대·성폭력·실종·청소년 분야 고양경찰서 여성청소년과 2026 성과 (약 1분)">
+<meta name="description" content="사회적 약자의 곁을, 끝까지 —관계성 범죄·학대·성폭력·실종·청소년 분야 고양경찰서 여성청소년과 2026 성과 (약 1분)">
 <meta property="og:title" content="고양경찰서 여성청소년과 2026 성과">
-<meta property="og:description" content="약자의 곁을, 끝까지 (약 1분 모션그래픽)">
+<meta property="og:description" content="사회적 약자의 곁을, 끝까지 (약 1분 모션그래픽)">
 <meta property="og:image" content="https://dlrmsals1425-dotcom.github.io/goyang-2026-yeocheong/photos/0_station.jpg">
 <meta property="og:type" content="website">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
@@ -96,7 +96,7 @@ h2{font-size:74px;line-height:1.22;font-weight:800;letter-spacing:-.02em}
 .scene.on .hero img{animation:heroZoom 5.5s ease-out both}
 @keyframes heroZoom{from{transform:scale(1.25)}to{transform:scale(1.05)}}
 .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,23,48,.15) 0%,rgba(11,23,48,.35) 45%,var(--navy) 100%)}
-#s-open h1{position:relative;font-size:178px;line-height:1.08;font-weight:900;letter-spacing:-.05em;text-shadow:0 10px 40px rgba(0,0,0,.5)}
+#s-open h1{position:relative;font-size:170px;line-height:1.08;font-weight:900;letter-spacing:-.05em;text-shadow:0 10px 40px rgba(0,0,0,.5)}
 #s-open h1 em{font-style:normal;color:var(--gold)}
 #s-open .line{position:relative;margin-top:60px;display:flex;align-items:center;gap:26px}
 #s-open .line i{flex:none;width:14px;align-self:stretch;border-radius:7px;background:linear-gradient(var(--k1),var(--k2),var(--k3),var(--k4))}
@@ -145,6 +145,25 @@ h2{font-size:74px;line-height:1.22;font-weight:800;letter-spacing:-.02em}
 .scene.on .stampmark{animation:stamp .6s cubic-bezier(.2,.8,.2,1) both;animation-delay:var(--d)}
 .scene.out .stampmark{opacity:1}
 
+/* 언론보도: 신문사 이름이 도장처럼 박힘 */
+.press{display:flex;flex-direction:column;gap:28px}
+.pcard{position:relative;height:540px;padding:44px 46px;border-radius:36px;overflow:hidden;background:var(--card);display:flex;flex-direction:column;justify-content:space-between}
+.pcard .bg{position:absolute;inset:0}
+.pcard .bg img{width:100%;height:100%;object-fit:cover;filter:brightness(.9)}
+.scene.on .pcard .bg img{animation:kb 9s linear both}
+.pcard .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(11,23,48,.88) 25%,rgba(11,23,48,.1))}
+.pcard > *{position:relative}
+.pt{font-size:48px;font-weight:900;line-height:1.25}
+.pt small{display:block;margin-bottom:10px;font-size:32px;font-weight:700;color:var(--c)}
+.pcnt{position:absolute;right:40px;top:40px;padding:8px 22px;border-radius:14px;background:var(--c);font-size:30px;font-weight:800}
+.pcnt b{font-size:40px;font-weight:900}
+.marks{display:flex;gap:30px}
+.pmark{padding:16px 30px;border:8px solid var(--gold);border-radius:20px;color:var(--gold);background:rgba(11,23,48,.9);
+  font-size:58px;font-weight:900;white-space:nowrap;box-shadow:0 20px 50px rgba(0,0,0,.5);opacity:0;transform:rotate(var(--r))}
+.scene.on .pmark{animation:pstamp .6s cubic-bezier(.2,.8,.2,1) both;animation-delay:var(--d)}
+.scene.out .pmark{opacity:1}
+@keyframes pstamp{0%{opacity:0;transform:scale(3.2) rotate(var(--r))}55%{opacity:1;transform:scale(.9) rotate(var(--r))}100%{opacity:1;transform:rotate(var(--r))}}
+
 /* 카드 목록 */
 .cards{display:flex;flex-direction:column;gap:20px}
 .card{display:flex;align-items:center;gap:26px;padding:28px 34px;border-radius:30px;background:var(--card);font-size:40px;font-weight:800;line-height:1.3}
@@ -182,7 +201,8 @@ h2{font-size:74px;line-height:1.22;font-weight:800;letter-spacing:-.02em}
 .node{position:absolute;translate:-50% -50%;padding:14px 24px;border-radius:20px;background:#17264a;border:3px solid color-mix(in srgb,var(--c) 70%,transparent);font-size:30px;font-weight:800;text-align:center;line-height:1.25;white-space:nowrap}
 
 /* 활동 사진 모음 */
-.mosaic{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:300px;gap:16px}
+.mosaic{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:250px;gap:14px}
+.mosaic .chip{left:14px;top:auto;bottom:14px;padding:6px 14px;font-size:24px}
 .mosaic .photo{height:auto;border-radius:24px}
 .mosaic .wide{grid-column:span 2}
 
@@ -238,29 +258,18 @@ h2{font-size:74px;line-height:1.22;font-weight:800;letter-spacing:-.02em}
   </div>
 
   <!-- 오프닝 -->
-  <section class="scene" id="s-open" data-ch="0" data-dur="5500">
+  <section class="scene" id="s-open" data-ch="0" data-dur="4800">
     <div class="hero"><img src="photos/0_station.jpg" alt=""></div>
     <div class="flash" style="--d:600ms"></div>
     <div class="jolt" style="--jd:600ms">
-      <h1 class="a" style="--anim:slam;--du:.6s;--d:250ms">약자의 곁을,<br><em>끝까지</em></h1>
+      <h1 class="a" style="--anim:slam;--du:.6s;--d:250ms">사회적<br>약자의 곁을,<br><em>끝까지</em></h1>
     </div>
     <div class="line a" style="--anim:left;--d:2000ms"><i></i><p>고양경찰서 <b>여성청소년과</b><br>2026 성과</p></div>
   </section>
 
   <!-- ① 관계성 범죄 -->
-  <section class="scene" data-ch="1" data-dur="5000">
-    <div class="tag a">① 관계성 범죄 <small>1/5</small></div>
-    <h2 class="a" style="--d:150ms">모든 관계성 범죄를<br><span class="hl">빠짐없이</span> 들여다봅니다</h2>
-    <div class="steps">
-      <div class="step a" style="--anim:left;--d:600ms"><i>1</i><div>경찰서장 주관<br><em>일일 상황점검회의</em></div></div>
-      <div class="step a" style="--anim:left;--d:1000ms"><i>2</i><div>관계성 범죄 <em>전수 모니터링</em></div></div>
-      <div class="step a" style="--anim:left;--d:1400ms"><i>3</i><div>여청과장 주관 <em>전수합동조사</em><small>매일 2회 · 재발위험성 검토</small></div></div>
-      <div class="step goal a" style="--anim:pop;--d:1900ms"><i>✓</i><div>접수 유형 불문 <u>즉일 조사</u><small style="color:rgba(255,255,255,.85)">112신고·고소·진정·방문 상담</small></div></div>
-    </div>
-  </section>
-
-  <section class="scene" data-ch="1" data-dur="5000">
-    <div class="tag a">① 관계성 범죄 <small>2/5</small></div>
+  <section class="scene" data-ch="1" data-dur="4500">
+    <div class="tag a">① 관계성 범죄 <small>1/4</small></div>
     <h2 class="a" style="--d:150ms">초동조치 <span class="hl">미흡사례 비율</span></h2>
     <div class="chart a" style="--d:300ms;--anim:fade;--gap:60px;--cw:210px;--ht:600px">
       <div class="col before"><b><span class="num" data-to="3.3" data-dec="1" data-d="500">0</span>%</b><div class="bv" style="--h:400px;--d:500ms"></div><span>1분기</span></div>
@@ -274,8 +283,8 @@ h2{font-size:74px;line-height:1.22;font-weight:800;letter-spacing:-.02em}
     <div class="flash" style="--d:2050ms"></div>
   </section>
 
-  <section class="scene" data-ch="1" data-dur="5500">
-    <div class="tag a">① 관계성 범죄 <small>3/5</small></div>
+  <section class="scene" data-ch="1" data-dur="4600">
+    <div class="tag a">① 관계성 범죄 <small>2/4</small></div>
     <h2 class="a" style="--d:150ms">고위험 가해자,<br><span class="hl">적극적으로 격리</span></h2>
     <div class="sub a" style="--d:350ms;margin-top:-14px">'25.1.~10. → '26.1.~10. 신청 건수</div>
     <div class="cmp">
@@ -294,8 +303,8 @@ h2{font-size:74px;line-height:1.22;font-weight:800;letter-spacing:-.02em}
     </div>
   </section>
 
-  <section class="scene" data-ch="1" data-dur="5000">
-    <div class="tag a">① 관계성 범죄 <small>4/5</small></div>
+  <section class="scene" data-ch="1" data-dur="4500">
+    <div class="tag a">① 관계성 범죄 <small>3/4</small></div>
     <h2 class="a" style="--d:150ms">피해자 곁을<br><span class="hl">끝까지 지킵니다</span></h2>
     <div class="a" style="--d:500ms">
       <div class="cap" style="color:var(--dim)">스토킹 피해자 안전조치 <b style="color:#fff">88건 → 130건</b></div>
@@ -309,8 +318,8 @@ h2{font-size:74px;line-height:1.22;font-weight:800;letter-spacing:-.02em}
     </div>
   </section>
 
-  <section class="scene" data-ch="1" data-dur="5500">
-    <div class="tag a">① 관계성 범죄 <small>5/5</small></div>
+  <section class="scene" data-ch="1" data-dur="5000">
+    <div class="tag a">① 관계성 범죄 <small>4/4</small></div>
     <h2 class="a" style="--d:150ms"><span class="hl">우수사례</span><br>모니터링으로 숨은 피해를 찾다</h2>
     <div class="stampbox">
       <div class="story">
@@ -324,8 +333,8 @@ h2{font-size:74px;line-height:1.22;font-weight:800;letter-spacing:-.02em}
   </section>
 
   <!-- ② 학대·성폭력 -->
-  <section class="scene" data-ch="2" data-dur="5000">
-    <div class="tag a">② 학대·성폭력 <small>1/3</small></div>
+  <section class="scene" data-ch="2" data-dur="4600">
+    <div class="tag a">② 학대·성폭력 <small>1/2</small></div>
     <h2 class="a" style="--d:150ms">숨어 있던 노인학대,<br><span class="hl">신고로 드러나게</span></h2>
     <div class="chart a" style="--d:300ms;--anim:fade;--ht:560px">
       <div class="col before"><b><span class="num" data-to="195" data-d="500">0</span>건</b><div class="bv" style="--h:330px;--d:500ms"></div><span>'25년</span></div>
@@ -341,18 +350,7 @@ h2{font-size:74px;line-height:1.22;font-weight:800;letter-spacing:-.02em}
   </section>
 
   <section class="scene" data-ch="2" data-dur="4500">
-    <div class="tag a">② 학대·성폭력 <small>2/3</small></div>
-    <h2 class="a" style="--d:150ms">아동·노인·장애인,<br><span class="hl">맞춤형으로 보호</span></h2>
-    <div class="cards">
-      <div class="card a" style="--anim:left;--d:500ms"><span class="ic">🧒</span><div>다문화 피해아동 맞춤형 지원<small>통역인 섭외·법원 동행 → 피해아동보호명령 결정</small></div></div>
-      <div class="card a" style="--anim:left;--d:850ms"><span class="ic">💰</span><div>피해아동 경제적 지원<small>약 210만원</small></div><span class="aw">자경위 표창</span></div>
-      <div class="card a" style="--anim:left;--d:1200ms"><span class="ic">👵</span><div>다기능 협업 노인학대 예방교육<small>2회 · 200명</small></div></div>
-      <div class="card a" style="--anim:left;--d:1550ms"><span class="ic">🤝</span><div>장애인학대 예방 합동 캠페인<small>장애인의 날 (4.21)</small></div></div>
-    </div>
-  </section>
-
-  <section class="scene" data-ch="2" data-dur="5500">
-    <div class="tag a">② 학대·성폭력 <small>3/3</small></div>
+    <div class="tag a">② 학대·성폭력 <small>2/2</small></div>
     <div class="photo a" style="--d:100ms;--anim:fade;height:430px">
       <img src="photos/march.jpg" alt="" style="object-position:50% 70%">
       <div class="chip"><b>●</b>불법촬영 예방 거리행진</div>
@@ -372,8 +370,8 @@ h2{font-size:74px;line-height:1.22;font-weight:800;letter-spacing:-.02em}
   </section>
 
   <!-- ③ 실종·청소년 -->
-  <section class="scene" data-ch="3" data-dur="4500">
-    <div class="tag a">③ 실종·청소년 <small>1/4</small></div>
+  <section class="scene" data-ch="3" data-dur="4200">
+    <div class="tag a">③ 실종·청소년 <small>1/5</small></div>
     <div class="photo a" style="--d:100ms;--anim:fade;height:470px">
       <img src="photos/finger.jpg" alt="">
       <div class="chip"><b>●</b>찾아가는 지문 사전등록</div>
@@ -386,8 +384,8 @@ h2{font-size:74px;line-height:1.22;font-weight:800;letter-spacing:-.02em}
     </div>
   </section>
 
-  <section class="scene" data-ch="3" data-dur="5000">
-    <div class="tag a">③ 실종·청소년 <small>2/4</small></div>
+  <section class="scene" data-ch="3" data-dur="4600">
+    <div class="tag a">③ 실종·청소년 <small>2/5</small></div>
     <h2 class="a" style="--d:150ms">학교로 찾아가는<br><span class="hl">범죄예방교육</span></h2>
     <div class="a" style="--d:500ms">
       <div class="big" style="font-size:190px"><span class="num" data-to="18832" data-d="500" data-du="1300">0</span><small>명</small></div>
@@ -401,8 +399,8 @@ h2{font-size:74px;line-height:1.22;font-weight:800;letter-spacing:-.02em}
     </div>
   </section>
 
-  <section class="scene" data-ch="3" data-dur="5000">
-    <div class="tag a">③ 실종·청소년 <small>3/4</small></div>
+  <section class="scene" data-ch="3" data-dur="4600">
+    <div class="tag a">③ 실종·청소년 <small>3/5</small></div>
     <h2 class="a" style="--d:150ms">위기청소년,<br><span class="hl">먼저 찾아 선도</span></h2>
     <div class="jolt" style="--jd:950ms">
       <div class="a" style="--anim:slam;--du:.55s;--d:600ms">
@@ -427,8 +425,8 @@ h2{font-size:74px;line-height:1.22;font-weight:800;letter-spacing:-.02em}
     <div class="flash" style="--d:750ms"></div>
   </section>
 
-  <section class="scene" data-ch="3" data-dur="6000">
-    <div class="tag a">③ 실종·청소년 <small>4/4</small></div>
+  <section class="scene" data-ch="3" data-dur="4500">
+    <div class="tag a">③ 실종·청소년 <small>4/5</small></div>
     <h2 class="a" style="--d:150ms"><span class="hl">자체 시책</span>으로 넓힌 청소년 보호</h2>
     <div class="tiles">
       <div class="tile a" style="--anim:pop;--d:400ms"><img src="photos/cgv.jpg" alt="" style="object-position:50% 40%">
@@ -443,8 +441,39 @@ h2{font-size:74px;line-height:1.22;font-weight:800;letter-spacing:-.02em}
     <div class="sub a" style="--d:1800ms">+ 열품타 협업 배너 · '더 하모니' 동아리</div>
   </section>
 
+  <section class="scene" data-ch="3" data-dur="5700">
+    <div class="tag a">③ 실종·청소년 <small>5/5</small></div>
+    <h2 class="a" style="--d:150ms">청소년 보호 활동,<br><span class="hl">언론이 주목했습니다</span></h2>
+    <div class="press">
+      <div class="jolt" style="--jd:1630ms">
+        <div class="pcard a" style="--anim:left;--d:400ms">
+          <div class="pcnt">언론보도 <b>3</b>곳</div>
+          <div class="pt"><small>'26. 10. 17.</small>청소년 어울림마당 '아트락'<br>마약 예방 캠페인</div>
+          <div class="marks">
+            <span class="pmark" style="--d:1300ms;--r:-7deg">현대일보</span>
+            <span class="pmark" style="--d:1300ms;--r:5deg">고양신문</span>
+          </div>
+        </div>
+      </div>
+      <div class="jolt" style="--jd:2830ms"><div class="jolt" style="--jd:3180ms">
+        <div class="pcard a" style="--anim:left;--d:700ms">
+          <div class="bg"><img src="photos/night_patrol.jpg" alt="" style="object-position:50% 70%"></div>
+          <div class="pcnt">언론보도 <b>4</b>곳</div>
+          <div class="pt"><small>'26. 10. 14.</small>청소년치안정책자문단 발대식<br>· 합동 비행 예방 순찰</div>
+          <div class="marks">
+            <span class="pmark" style="--d:2500ms;--r:6deg">메트로신문</span>
+            <span class="pmark" style="--d:2850ms;--r:-6deg">자유로신문</span>
+          </div>
+        </div>
+      </div></div>
+    </div>
+    <div class="flash" style="--d:1630ms"></div>
+    <div class="flash" style="--d:2830ms"></div>
+    <div class="flash" style="--d:3180ms"></div>
+  </section>
+
   <!-- ④ 협업 -->
-  <section class="scene" data-ch="4" data-dur="5000">
+  <section class="scene" data-ch="4" data-dur="4000">
     <div class="tag a">④ 협업 <small>1/2</small></div>
     <h2 class="a" style="--d:150ms">혼자가 아니라,<br><span class="hl">함께 지킵니다</span></h2>
     <div class="net" id="net">
@@ -456,12 +485,15 @@ h2{font-size:74px;line-height:1.22;font-weight:800;letter-spacing:-.02em}
   <section class="scene" data-ch="4" data-dur="4500">
     <div class="tag a">④ 협업 <small>2/2</small></div>
     <div class="mosaic">
-      <div class="photo wide a" style="--anim:pop;--d:100ms"><img src="photos/mou.jpg" alt=""><div class="chip"><b>●</b>MOU 체결</div></div>
-      <div class="photo a" style="--anim:pop;--d:250ms"><img src="photos/night_patrol.jpg" alt=""></div>
-      <div class="photo a" style="--anim:pop;--d:400ms"><img src="photos/edu_local.jpg" alt=""></div>
-      <div class="photo wide a" style="--anim:pop;--d:550ms"><img src="photos/edu_agency.jpg" alt=""><div class="chip"><b>●</b>유관기관 교육</div></div>
+      <div class="photo wide a" style="--anim:pop;--d:100ms"><img src="photos/mou.jpg" alt=""><div class="chip"><b>●</b>3개 기관 MOU 체결</div></div>
+      <div class="photo a" style="--anim:pop;--d:220ms"><img src="photos/council.jpg" alt=""><div class="chip"><b>●</b>통합지원 협의체</div></div>
+      <div class="photo a" style="--anim:pop;--d:340ms"><img src="photos/safety_meeting.jpg" alt=""><div class="chip"><b>●</b>안전조치 합동회의</div></div>
+      <div class="photo a" style="--anim:pop;--d:460ms"><img src="photos/edu_local.jpg" alt=""><div class="chip"><b>●</b>지역관서 교육</div></div>
+      <div class="photo a" style="--anim:pop;--d:580ms"><img src="photos/stalking_edu.jpg" alt=""><div class="chip"><b>●</b>스토킹 대응 교육</div></div>
+      <div class="photo wide a" style="--anim:pop;--d:700ms"><img src="photos/campaign.jpg" alt=""><div class="chip"><b>●</b>유관기관 합동 캠페인</div></div>
+      <div class="photo a" style="--anim:pop;--d:820ms"><img src="photos/edu_agency.jpg" alt=""><div class="chip"><b>●</b>대학교 예방교육</div></div>
     </div>
-    <h2 class="a" style="--d:1000ms">현장의 활동을<br><span class="hl">널리 알렸습니다</span></h2>
+    <h2 class="a" style="--d:1100ms">현장의 활동을<br><span class="hl">널리 알렸습니다</span></h2>
     <div class="stats">
       <div class="stat a" style="--anim:pop;--d:1400ms"><b><span class="num" data-to="7" data-d="1400" data-du="600">0</span><small>곳</small></b><span>언론보도</span></div>
       <div class="stat a" style="--anim:pop;--d:1600ms"><b><span class="num" data-to="5" data-d="1600" data-du="600">0</span><small>곳</small></b><span>SNS·맘카페 등<br>온·오프라인 홍보</span></div>
@@ -469,7 +501,7 @@ h2{font-size:74px;line-height:1.22;font-weight:800;letter-spacing:-.02em}
   </section>
 
   <!-- 클로징 -->
-  <section class="scene" id="s-end" data-ch="5" data-dur="7000">
+  <section class="scene" id="s-end" data-ch="5" data-dur="5400">
     <div class="merge">
       <i style="background:var(--k1);--y:-160px;--d:0ms"></i>
       <i style="background:var(--k2);--y:160px;--d:120ms"></i>
@@ -519,9 +551,8 @@ h2{font-size:74px;line-height:1.22;font-weight:800;letter-spacing:-.02em}
 (() => {
   const stage = document.getElementById('stage');
   const S = [...stage.querySelectorAll('.scene')];
-  // 전체 템포: 장면 길이·등장 시점·카운트 속도를 한 번에 압축 (1 = 원래 속도)
-  const SPEED = 0.8;
-  S.forEach(s => { s.dataset.dur = Math.round(s.dataset.dur * SPEED); });
+  // 등장 시점·카운트 속도 압축 (1 = 원래 속도). 장면 길이는 data-dur 값(ms) 그대로 — 합계 1:10
+  const SPEED = 0.85;
   const DUR = S.map(s => +s.dataset.dur);
   const CH = S.map(s => +s.dataset.ch);
   const COLORS = ['var(--navy)', 'var(--k1)', 'var(--k2)', 'var(--k3)', 'var(--k4)', 'var(--navy)'];
