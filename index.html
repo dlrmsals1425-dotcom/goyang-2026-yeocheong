@@ -31,7 +31,8 @@ body{font-family:"Pretendard Variable",Pretendard,"Apple SD Gothic Neo","Malgun 
 
 /* 상단 챕터 진행 바 */
 #bar{position:absolute;left:90px;right:90px;top:90px;display:flex;gap:16px;z-index:5;transition:opacity .5s}
-#stage[data-ch="0"] #bar,#stage[data-ch="5"] #bar{opacity:0}
+#stage[data-ch="0"] #bar,#stage[data-ch="5"] #bar,#stage[data-ch="6"] #bar{opacity:0}
+#stage[data-ch="6"] footer{opacity:0}
 .seg{flex:1}
 .seg .track{height:12px;border-radius:6px;background:rgba(255,255,255,.16);overflow:hidden}
 .seg .fill{height:100%;width:0;background:var(--sc)}
@@ -221,6 +222,11 @@ h2{font-size:74px;line-height:1.22;font-weight:800;letter-spacing:-.02em}
 .emblem{width:180px;height:180px;border-radius:50%;object-fit:cover;margin-top:20px;box-shadow:0 0 0 10px rgba(255,255,255,.12),0 20px 60px rgba(0,0,0,.5)}
 #s-end .msg{font-size:56px;line-height:1.35;font-weight:800}
 #s-end .msg em{font-style:normal;color:var(--gold)}
+/* 엔딩: 로고와 부서명 */
+#s-logo{justify-content:center;align-items:center;text-align:center;gap:70px}
+#s-logo img{width:620px;height:620px;object-fit:contain;border-radius:50%;background:#fff;filter:drop-shadow(0 30px 80px rgba(0,0,0,.45))}
+#s-logo .name{font-size:84px;line-height:1.3;font-weight:900;letter-spacing:-.02em}
+#s-logo .name em{display:block;font-style:normal;color:var(--gold)}
 
 /* 하단 재생 컨트롤: 이전·재생·다음 + 끌어서 이동하는 진행 막대 */
 #ctrl{position:absolute;left:40px;right:40px;bottom:34px;height:96px;z-index:8;display:flex;align-items:center;gap:14px;
@@ -522,6 +528,12 @@ h2{font-size:74px;line-height:1.22;font-weight:800;letter-spacing:-.02em}
     <div class="msg a" style="--d:2200ms">약자의 곁을 끝까지 지키는<br><em>고양경찰서 여성청소년과</em></div>
   </section>
 
+  <!-- 엔딩 로고 -->
+  <section class="scene" id="s-logo" data-ch="6" data-dur="4000">
+    <img class="a" src="photos/logo.png" alt="고양경찰서" style="--anim:pop;--du:.9s;--d:200ms">
+    <div class="name a" style="--d:900ms">고양경찰서<em>여성청소년과</em></div>
+  </section>
+
   <footer>고양경찰서 여성청소년과 · 2026 성과</footer>
 
   <div id="ctrl">
@@ -551,11 +563,11 @@ h2{font-size:74px;line-height:1.22;font-weight:800;letter-spacing:-.02em}
 (() => {
   const stage = document.getElementById('stage');
   const S = [...stage.querySelectorAll('.scene')];
-  // 등장 시점·카운트 속도 압축 (1 = 원래 속도). 장면 길이는 data-dur 값(ms) 그대로 — 합계 1:10
+  // 등장 시점·카운트 속도 압축 (1 = 원래 속도). 장면 길이는 data-dur 값(ms) 그대로 — 합계 1:14
   const SPEED = 0.85;
   const DUR = S.map(s => +s.dataset.dur);
   const CH = S.map(s => +s.dataset.ch);
-  const COLORS = ['var(--navy)', 'var(--k1)', 'var(--k2)', 'var(--k3)', 'var(--k4)', 'var(--navy)'];
+  const COLORS = ['var(--navy)', 'var(--k1)', 'var(--k2)', 'var(--k3)', 'var(--k4)', 'var(--navy)', 'var(--navy)'];
   const segs = [...stage.querySelectorAll('.seg')];
   const bgm = document.getElementById('bgm');
   let idx = -1, t = 0, playing = false, started = false, last = performance.now();
